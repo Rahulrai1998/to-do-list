@@ -8,12 +8,19 @@
   </head>
   <body>
     <div class="parent-card">
-      <h2 class="title">To-Do List<img src="To-Do-Img/images/icon.png" /></h2>
+      <h2 class="title">To-Dos<img src="To-Do-Img/images/icon.png" /></h2>
       <!-- INPUT -->
       <div class="input">
         <input type="text" id="input-box" placeholder="Add something" />
-        <button class="submit-btn">Add</button>
+        <button class="submit-btn" onclick="addTask()">+</button>
       </div>
+
+      <!-- LIST -->
+      <ul id="list-container" class="list-container">
+        <!-- <li class="checked">Task</li>
+        <li>Task</li>
+        <li>Task</li> -->
+      </ul>
     </div>
 
     <script src="index.js"></script>

@@ -8,7 +8,7 @@
 body {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #595959, #c9c9c9);
+  background: white;
 }
 
 div.parent-card {
@@ -20,7 +20,7 @@ div.parent-card {
   border-radius: 5px;
   background-color: white;
   margin: 200px auto;
-  box-shadow: -0.1px -0.1px 1px 1px rgb(2, 0, 36, 0.05);
+  box-shadow: 0.5px 0.5px 1.5px 1px rgb(14, 199, 14, 0.2);
 }
 
 h2.title {
@@ -35,13 +35,15 @@ h2.title {
   width: 35px;
 }
 div.input {
+  box-shadow: 0.5px 0.5px 1.5px 1px rgb(14, 199, 14, 0.2);
   border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgb(225, 224, 224);
+  background: rgb(233, 251, 231, 0.5);
   padding: 0px 0px 0px 12px;
   margin-bottom: 20px;
+  height: 40px;
 }
 .input input {
   border: none;
@@ -50,12 +52,62 @@ div.input {
   background: transparent;
 }
 .input button {
+  display: none;
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 10px 30px;
-  border-radius: 20px;
-  background: rgb(13, 194, 13);
+  font-size: 2rem;
+  /* padding: 10px 30px; */
+  border-radius: 50%;
+  background: rgb(14, 199, 14);
   color: white;
+  width: 40px;
+  height: 40px;
+}
+
+ul.list-container li {
+  list-style: none;
+  font-size: 15px;
+  padding: 15px 8px 12px 50px;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul.list-container li::before {
+  content: "";
+  position: absolute;
+  background-image: url("To-Do-Img/images/unchecked.png");
+  height: 28px;
+  width: 28px;
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before{
+  background-image: url("To-Do-Img/images/checked.png");
+}
+
+ul li span{
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+
+ul li span:hover{
+  background: #edeef0;
+  border-radius: 50%;
 }
