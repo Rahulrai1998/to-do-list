@@ -2,8 +2,14 @@ const addBtn = document.querySelector(".submit-btn");
 const inputBox = document.querySelector("#input-box");
 const listContainer = document.querySelector("#list-container");
 
-inputBox.addEventListener("click", () => {
-  addBtn.style.display = "block";
+inputBox.addEventListener("click", (e) => {
+  if (e.target.focus) addBtn.style.display = "block";
+});
+
+addBtn.addEventListener("click", () => {
+  setTimeout(() => {
+    addBtn.style.display = "none";
+  }, 200);
 });
 
 function addTask() {
